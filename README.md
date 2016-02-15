@@ -1,11 +1,15 @@
-#[LUA] WoW Addon: MySellAll
+#WoW Addon: MySellAll
 
-Addon for World of Warcraft MMORPG
+Аддон для World of Warcraft, написанный на LUA.
 
-Description: Addon sells gray items, repairs equipment, calculates costs.
+Каждый раз подходя к вендору было лень нажимать кнопки "починить всё". А кнопки "продать всё не нужное" вообще не было. Теперь эти операции происходят по событию открытия диалога с вендором (т.е. кнопка "сделать хорошо", которую даже нажимать не нужно). Ну и плюс в логика расчета разницы починки/продажи хлама: прибыль выводится в окно чата.
 
-Related links:
+
+Странички аддона:
+
+http://www.curse.com/addons/wow/mysellall
 
 http://wow.curseforge.com/addons/mysellall
 
-http://www.curse.com/addons/wow/mysellall
+
+
