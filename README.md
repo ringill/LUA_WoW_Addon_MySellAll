@@ -14,3 +14,9 @@ http://wow.curseforge.com/addons/mysellall
 
 
 
+## How to build
+- clone repository
+- run script: .\script\build.ps1
+- get "mySellAll.zip" in .\dist folder
+
+Version number will be copied from ".\package.json" to ".\dist\mySellAll.zip\mysellall.toc"
