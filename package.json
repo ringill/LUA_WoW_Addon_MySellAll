@@ -1,0 +1,6 @@
+{
+  "name": "mysellall",
+  "version": "6.0",
+  "main": "mySellAll/mysellall.lua",
+  "license": "GNU Lesser General Public License"
+}
