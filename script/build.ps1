@@ -41,7 +41,7 @@ $finalZipPath = Join-Path -Path $distFolderPath -childpath $distFileName
 # source in distr
 $sourceInDistrFolder = Join-Path -Path $distFolderPath -childpath $srcFolderName
 # path to source folder in dist folder
-$sourceForZipPath = $sourceInDistrFolder  + "\*"
+$sourceForZipPath = $sourceInDistrFolder
 Compress-Archive $sourceForZipPath -DestinationPath $finalZipPath
 
 # delete unneeded folder
