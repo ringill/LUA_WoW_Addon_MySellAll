@@ -1,4 +1,4 @@
-## Interface: 60200
+## Interface: 70300
 ## Title: mySellAll
 ## Title-ruRU: mySellAll
 ## Title-frFR: mySellAll
@@ -8,7 +8,7 @@
 ## Notes-deDE: "Addon verkauft graue Sachen, repariert Einrichtungen."
 ## Notes-ruRU: "Аддон продает серые вещи, чинит шмот."
 ## Author: Ringill
-## Version: 6.0.2
+## Version: x.x.x
 localization.core.lua
 localization.fr.lua
 localization.de.lua

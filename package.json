@@ -1,0 +1,6 @@
+{
+  "name": "mysellall",
+  "version": "7.1",
+  "main": "mySellAll/mysellall.lua",
+  "license": "GNU Lesser General Public License version 3 (LGPLv3)"
+}
