@@ -1,0 +1,32 @@
+@token = {{guid}}
+@baseUrl = https://wow.curseforge.com/api
+
+# get game api
+GET {{baseUrl}}/game/versions
+X-Api-Token: {{token}}
+
+
+POST {{baseUrl}}/projects/mysellall/upload-file
+
+# upload file
+POST {{baseUrl}}/projects/mysellall/upload-file HTTP/1.1
+X-Api-Token: {{token}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="metadata"
+
+{
+    changelog: "Test upload: try 0", //Can be HTML or markdown if changelogType is set.
+    changelogType: ['text'], //Optional: defaults to text ['text', 'html', 'markdown']
+    displayName: "mySellAll v6.0.2226", // Optional: A friendly display name used on the site if provided.
+    gameVersions: [6904], // A list of supported game versions, see the Game Versions API for details. Not supported if parentFileID is provided.
+    releaseType: "alpha" // One of "alpha", "beta", "release".
+}
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name=`"file`"; filename=`"mySellAll.zip`"
+Content-Type: application/x-zip-compressed
+
+< ./dist/mySellAll.zip
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
