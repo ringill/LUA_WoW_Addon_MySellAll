@@ -2,15 +2,9 @@
 local frame = CreateFrame("FRAME", "mySellAll")
 frame:RegisterEvent("MERCHANT_SHOW")
 frame:RegisterEvent("MERCHANT_CLOSED")
---frame:RegisterEvent("LOOT_BIND_CONFIRM")
 
---local busy = false
---local OnSend = false
-local bag, slot
+local bag, slot, beginmoney, endmoney, show
 
-local beginmoney
-local endmoney
-local show
 
 local function ToMoney(Coppers)
 	local FlMinus = false
@@ -80,19 +74,18 @@ local function eventHandler(self, event, ...)
 		show = show + 1
 		if (show == 1) then
 			endmoney = GetMoney()
-			local raznica = (endmoney - beginmoney)
-			if raznica > 0 then
-				print(L["Result "] .. "|TInterface\\Icons\\INV_Misc_Coin_01:16|t " .. ToMoney(raznica))
+			local difference = (endmoney - beginmoney)
+			if difference > 0 then
+				print(L["Result "] .. "|TInterface\\Icons\\INV_Misc_Coin_01:16|t " .. ToMoney(difference))
 			end
-			if raznica < 0 then
-				print(L["Result "] .. "|cFFFF0000 -|r " .. ToMoney(raznica))
+			if difference < 0 then
+				print(L["Result "] .. "|cFFFF0000 -|r " .. ToMoney(difference))
 			end
 		end
 	end
 end
 
 frame:SetScript("OnEvent", eventHandler)
-frame:SetScript("OnUpdate", DoTheStuff)
 
 OptPanel = CreateFrame("Frame", "mySellAllOptions", UIParent)
 OptPanel.name = "mySellAll"
