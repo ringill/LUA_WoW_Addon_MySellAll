@@ -1,6 +1,11 @@
 {
   "name": "mysellall",
-  "version": "7.1",
-  "main": "mySellAll/mysellall.lua",
-  "license": "GNU Lesser General Public License version 3 (LGPLv3)"
+  "version": "7.2",
+  "homepage": "https://github.com/ringill/mySellAll#readme",
+  "license": "GNU Lesser General Public License version 3 (LGPLv3)",
+  "bugs": {
+    "url": "https://github.com/ringill/mySellAll/issues",
+    "email": "mysellall.ringill@gmail.com"
+  },
+  "main": "mySellAll/mysellall.lua"
 }
