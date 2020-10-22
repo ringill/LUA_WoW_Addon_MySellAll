@@ -2,7 +2,6 @@ $distFolderName = "dist"
 $srcFolderName = "mySellAll"
 $versionLineBase = "## Version: "
 $versionStub = "x.x.x"
-$jsonName = "package.json"
 $tocFileName = "mySellAll.toc"
 # root path
 $rootPath = Split-Path $PSScriptRoot -Parent
@@ -19,12 +18,8 @@ New-Item -Path $distFolderPath -ItemType directory -Force
 $srcFolderPath = Join-Path -Path $rootPath -childpath $srcFolderName
 Copy-Item -Path $srcFolderPath -Recurse -Destination $distFolderPath -Container
 
-# read version from package.json
-$jsonPath = Join-Path -Path $rootPath -childpath $jsonName
-$jsonVersion = Get-Content -Raw -Path $jsonPath | ConvertFrom-Json | ForEach-Object version
-# build version line
-$buildNumber = (Get-Date).Year + ((Get-Date).Month * 31) + (Get-Date).Day
-$buildNumberString = $jsonVersion + "." + $buildNumber.ToString()
+# read build version from enviroment variables
+$buildNumberString = $env:MSA_BUILD
 
 # replace version line in souce file in dist folder
 $versionStubLine = $versionLineBase + $versionStub

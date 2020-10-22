@@ -1,10 +1,9 @@
-@token = "guid"
+@token = 
 @baseUrl = https://wow.curseforge.com/api
 
 # get game api
-GET {{baseUrl}}/game/versions
+GET {{baseUrl}}/game/versions?token={{token}}
 X-Api-Token: {{token}}
-
 
 POST {{baseUrl}}/projects/mysellall/upload-file
 
