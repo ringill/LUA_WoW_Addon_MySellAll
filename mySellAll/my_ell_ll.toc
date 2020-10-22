@@ -1,0 +1,16 @@
+## Interface: 80200
+## Title: mySellAll
+## Title-ruRU: mySellAll
+## Title-frFR: mySellAll
+## Title-deDE: mySellAll
+## Notes: "Addon sells gray items, repairs equipment."
+## Notes-frFR: "Addon vend des articles de gris, de materiel d reparations."
+## Notes-deDE: "Addon verkauft graue Sachen, repariert Einrichtungen."
+## Notes-ruRU: "Аддон продает серые вещи, чинит шмот."
+## Author: Ringill
+## Version: x.x.x
+localization.core.lua
+localization.fr.lua
+localization.de.lua
+localization.ru.lua
+mysellall.lua
