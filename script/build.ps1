@@ -3,7 +3,7 @@ $srcFolderName = "mySellAll"
 $versionLineBase = "## Version: "
 $versionStub = "x.x.x"
 $jsonName = "package.json"
-$tocFileName = "mysellall.toc"
+$tocFileName = "mySellAll.toc"
 # root path
 $rootPath = Split-Path $PSScriptRoot -Parent
 
