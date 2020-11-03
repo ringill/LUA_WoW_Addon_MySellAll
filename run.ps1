@@ -18,11 +18,11 @@ catch {
   Write-Output $Error[0].Exception.Message
   exit $exitCode
 }
-try {
-  . ./script/publish.ps1
-  $exitCode = $LastExitCode
-}
-catch {
-  Write-Output $Error[0].Exception.Message
-  exit $exitCode
-}
+# try {
+#   . ./script/publish.ps1
+#   $exitCode = $LastExitCode
+# }
+# catch {
+#   Write-Output $Error[0].Exception.Message
+#   exit $exitCode
+# }
